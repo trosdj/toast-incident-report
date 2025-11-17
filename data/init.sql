@@ -2,8 +2,8 @@
 * SQL initialization script for T.O.A.S.T. Incident Report System
 */
 
-/*****************/
-/* ANOMALY TABLE */
+  /*****************/
+ /* ANOMALY TABLE */
 /*****************/
 
 DROP TABLE IF EXISTS anomalies;
@@ -75,3 +75,26 @@ INSERT INTO
     anomalies
     ( id, description, risk_level )
     VALUES( "BDY003", "Corpse", 5 );
+
+
+
+
+
+  /*******************/
+ /* INCIDENTS TABLE */
+/*******************/
+
+DROP TABLE IF EXISTS incident;
+
+CREATE TABLE incident (
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    employee_id VARCHAR NOT NULL,
+    location VARCHAR NOT NULL,
+    date VARCHAR NOT NULL,
+    time VARCHAR NOT NULL,
+    isWitnessed INTEGER NOT NULL,
+    witnesses VARCHAR,
+    FOREIGN KEY (anomaly_code) REFERENCES anomalies(id),
+    description VARCHAR NOT NULL,
+    reported_at VARCHAR NOT NULL,
+);

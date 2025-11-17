@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.O.A.S.T. Incident Report Form</title>
+</head>
+<body>
+    <h1>T.O.A.S.T. Incident Report System</h1>
+
+    <form action="">
+        <label for="employeeId">Employee ID Number</label>
+        <input type="number" id="employeeId" name="employeeId" required>
+
+        <br>
+
+        <label for="date">Date of Event</label>
+        <input type="date" id="date" name="date" required>
+
+        <br>
+
+        <label for="time">Time of Event</label>
+        <input type="time" id="time" name="time" required>
+
+        <br>
+
+        <label for="location">Location of Event</label>
+        <select id="location" name="location" required>
+            <option value="warehouse">Warehouse</option>
+            <option value="reception">Reception</option>
+            <option value="office">Office</option>
+            <option value="parkingLot">Parking Lot</option>
+            <option value="breakRoom">Break Room</option>
+        </select>
+
+        <br>
+
+        <span>Any Witnesses?</span>
+        <input type="radio" id="yes" name="isWitness" value="yes" required>
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="isWitness" value="no" required>
+        <label for="no">No </label>
+
+        <br>
+
+        <label for="witnesses">If yes, please list their employee id numbers (seperate with commas)</label>
+        <input type="text" id="witnesses" name="witnesses">
+
+        <br>
+
+        <label for="anomoly">Anomoly Code</label>
+        <select name="anomoly" id="anomoly" required>
+            <option value="obj001">OBJ001 - Extra Object</option>
+            <option value="obj002">OBJ002 - Object Disappearance</option>
+            <option value="obj003">OBJ003 - Object Movement</option>
+            <option value="aud001">AUD001 - Disembodied Voice</option>
+            <option value="aud002">AUD002 - Unknown Music</option>
+            <option value="aud003">AUD003 - Screams</option>
+            <option value="dis001">DIS001 - Shadows</option>
+            <option value="dis002">DIS002 - Teleportation</option>
+            <option value="dis003">DIS003 - Time Dilation</option>
+            <option value="bdy001">BDY001 - Intruder</option>
+            <option value="bdy002">BDY002 - Spectral Body</option>
+            <option value="bdy003">BDY003 - Corpse</option>
+            <option value="other">Other</option>
+        </select>
+
+        <br>
+
+        <label for="description">Description of Event</label> <br>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+
+        <br>
+
+        <button type="submit">Submit Report</button>
+    </form>
+
+</body>
+</html>
